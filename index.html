@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Participants list</h1>
+        <p>Enter your participants and click add. You want to delete the last participant? Just click remove!</p>
+        <form>
+            <input type="text" name="inputName" id="inputName" placeholder="type your name here">
+            <div class="buttonContainer">
+                <button type="submit" onclick="addTeilnehmer(event)">Add</button>
+                <button type="submit" onclick="deleteTeilnehmer(event)">Remove</button>
+            </div>
+        </form>
+        <div class="containerList">
+            <h2>Your participants</h2>
+            <div id="list">
+            </div>
+            <h2>Total number of participants</h2>
+            <p id="anzahlName"></p>
+        </div>
+    </div>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
