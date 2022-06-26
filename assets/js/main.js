@@ -9,11 +9,22 @@ let teilnehmer = [];
 let addTeilnehmer = (event) => {
     event.preventDefault();
     teilnehmer.push(inputName.value);
-    list.innerHTML = `<h3> ${teilnehmer.join("</h3><h3>")} </h3>`;
-    let length = teilnehmer.length;
-    anzahlName.innerHTML = length;
-    inputName.value = "";
+
+    if(inputName.value == "") {
+        teilnehmer.pop();
+        anzahlName.innerHTML = "Please type a name!";
+
+    } else {
+        list.innerHTML = `<h3> ${teilnehmer.join("</h3><h3>")} </h3>`;
+        let length = teilnehmer.length;
+        anzahlName.innerHTML = length;
+        inputName.value = "";
+
+    }
+    
 };
+
+
 
 // ---------- REMOVE ----------
 
